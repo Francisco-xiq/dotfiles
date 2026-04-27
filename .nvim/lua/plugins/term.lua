@@ -3,11 +3,13 @@ return {
     version = "*",
     config = function()
         require("toggleterm").setup({
-            size = 10,                   
-            open_mapping = [[<leader>t]],
+            size = 10,       
             direction = 'horizontal',    
             shade_terminals = true,      
         })
+
+        -- Criando o atalho manualmente apenas para Normal e Terminal (ignora Modo de Inserção)
+        vim.keymap.set({'n', 't'}, '<leader>t', '<Cmd>ToggleTerm<CR>', { desc = 'Toggle Terminal' })
 
         function _G.set_terminal_keymaps()
             local opts = {buffer = 0}
