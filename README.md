@@ -1,2 +1,3 @@
-# dotfiles
-personal dotfiles 
+#Chico's dotfiles
+
+
